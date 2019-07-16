@@ -1,9 +1,14 @@
 <html>
 <head>
-<title></title>
+<title>Sign In</title>
+<meta name="viewport" content="width=device-width, user-scalable=no">
 <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
 <style type="text/css">
 	
+body{
+		padding: 0px;
+		margin: 0px;
+	}
 .div01{
 		height: 10%;
 		width: 20%;
@@ -23,22 +28,24 @@
 		position: sticky;
 }
 
-li{
+a{
 	display: inline;
 	float: right;
 	font-size: 25px;
 	margin-right: 20px;	
+	text-decoration: none;
 }
 
-li:hover{
-	 background-color: lightgray;
+.a:hover{
+	 		background-color: lightgray;
 }
-
 .bgimage{
 		background-image:url('Adobe.png');
-		height: 95%;
-		width: 99%;
+		height: 100vh;
+		width: 100%;
+		background-size: cover;
 	}
+
 
 .div3{
 		width: 100%;
@@ -46,32 +53,6 @@ li:hover{
 			
 		}
 
-.div3 input[type=text]{
-		margin-left: 28%;
-		margin-top: 8%;
-		padding-left: 2%;
-		width: 43%;
-		height: 14%;
-		background-color: #E0E0E0;
-		font-size:20px;
-		border-radius: 3%;
-		border: none;
-		opacity: 0.7;
-		font-family: 'Roboto', sans-serif
-		}
-.div3 input[type=number]{
-			margin-left: 28%;
-			margin-top: 2%;
-			padding-left: 2%;
-			width: 43%;
-			height: 14%;
-			background-color: #E0E0E0;
-			font-size:20px;
-			border-radius: 3%;
-			border: none;
-			opacity: 0.7;
-			font-family: 'Roboto', sans-serif
-		}
 .div3 input[type=email]{
 			margin-left: 28%;
 			margin-top: 2%;
@@ -102,7 +83,7 @@ li:hover{
 .div3 button{
 			width: 45%;
 			margin-left: 28%;
-			margin-top: 2%;
+			margin-top: 0%;
 			height: 14%;
 			border-radius: 3%;
 			background-color: #AED581;
@@ -116,6 +97,36 @@ li:hover{
 .div3 button:hover{
 			background-color: #B2FF59;
 		}
+		@media(min-width: 300px) and (max-width: 900px){
+	.div01{
+		width: 40%;
+	}
+	.div01 p{
+		font-size: 25px;
+	}
+	.div02{
+		width: 60%;
+	}
+	.a{
+		margin-top: 4%;
+		font-size: 20px;	
+	}
+	.div3{
+		margin-top: 15%;
+	}
+	.div3 input[type=email]{
+         width: 55%;
+         margin-left: 26%;
+	}
+	.div3 input[type=password]{
+		width: 55%;
+		 margin-left: 26%;
+	}
+	.div3 button{
+		width: 55%;
+		 margin-left: 26%;
+	}
+}
 
 </style>
 
@@ -127,9 +138,9 @@ li:hover{
 
 <div class="div02">
 	<ul>
-	<a href="signup.html"><li>Sign Up</li></a>
-	<a href="login.html"><li>Sign In</li></a>
- 	<a href="index.html"><li>Images</li></a>
+	<a href="signup.html" class="a"> Sign Up</a>
+	<a href="login.html"  class="a"> Sign In </a>
+ 	<a href="index.html"  class="a"> Images</a>
 </ul>
 </div>
 <br><br><br><br><br><br>
