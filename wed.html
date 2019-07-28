@@ -1,9 +1,10 @@
 <html>
 <head>
+	
 	<meta name="viewport" content="width=device-width, user-scalable=none">
 <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+
 <style type="text/css">
-	
 	body{
 		padding: 0px;
 		margin: 0px;
@@ -29,7 +30,6 @@ background-image: linear-gradient(316deg, #523a78 0%, #ee696b 74%);
 
 	}
 
-	
 .div1{
 		height: 10%;
 		width: 20%;
@@ -38,9 +38,6 @@ background-image: linear-gradient(316deg, #523a78 0%, #ee696b 74%);
 		font-size: 30px;
 		top: 0;
 		position: sticky;
-	
-	       
-	
 }
 
 .div2{
@@ -50,39 +47,49 @@ background-image: linear-gradient(316deg, #523a78 0%, #ee696b 74%);
 		float: left;
 		top: 0;
 		position: sticky;
-	
-	
 }
 
 li{
 	display: inline;
 	float: right;
 	font-size: 25px;
-	margin-right: 20px;	
+	margin-right: 20px;
 }
 
 li:hover{
 	 		background-color: lightgray;
 }
 
+.zoom {
+  padding: 0px;
+  transition: transform .5s;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+.zoom:hover {
+  -ms-transform: scale(1.0);
+  -webkit-transform: scale(1.0);
+  transform: scale(1.25); 
+}
+
 .div0{
-		width: 60%;
+		width: 100%;
 		height: 150%;
 		border-style: solid;
 		border-width: 1px;
-		margin-left: 20%;
+		margin-left: 0;
 }
 
-.div01{
-		width: 30%;
+#div01{
+		width: 20%;
 		height: 20%;
 		border-style: solid;
 		border-width: 1px;
 		float: left;
 		margin-left: 10%;
-		margin-top: 10%;
+		margin-top: 5%;
 }
-
 .div5{
 		background-color: ;
 		height: 40%;
@@ -142,26 +149,34 @@ li:hover{
 		}
 
 .div6{
-		background-color: lightgray;
+		background-color: gray;
 		height: 10%;
 		width: 100%;
 		padding: 3px;
 }
 
 	@media(min-width: 300px) and (max-width: 900px){
-		.div0{
-			width: 100%;
-			margin-left: 0%;
+	
+	.div0{
+		width: 100%;
+		margin-left: 0%;
+		height: 80vh;
 		}
 		
 		.div00{
 			height: 15%;
 		}
-	}
-</style>
-	
-<body>
 
+	#div01{
+			height: 19%;
+			width: 30%;
+			margin-left: 12%;
+
+		}
+	}
+
+</style>
+<body>
 <div class="div00">
 <div class="div1">
 	<p style="margin-left: 15px; margin-top: 15px">PicsMarket</p>
@@ -169,36 +184,41 @@ li:hover{
 
 <div class="div2">
 	<ul>
-	<a href="login.html"><li>Sign In</li></a>
 	<a href="signup.html"><li>Sign Up</li></a>
+	<a href="login.html"><li>Sign In</li></a>
  	<a href="index.html"><li>Images</li></a>
 </ul>
 </div>
-</div>
-<br><br><br><br><br>
+	</div>
+<br><br><br>
 <div class="div0">
-	<a target="_blank" href="wed01.jpeg"><div class="div01">
-    <img src="gs://images-faa21.appspot.com/" alt="Cinque Terre" width="100%" height="100%">
-  	</div></a>
-	<a target="_blank" href="wed02.jpg"><div class="div01">
+	<a target="_blank" href="wed01.jpeg"><div id="div01" class="zoom">
+    <img src="wed01.jpeg" alt="Cinque Terre" width="100%" height="100%">
+    </div></a>
+  <a target="_blank" href="wed02.jpg"><div id="div01" class="zoom">
     <img src="wed02.jpg" alt="Cinque Terre" width="100%" height="100%">
-  	</div></a>
-	<a target="_blank" href="wed03.jpg"><div class="div01">
-    <img src="gs://images-faa21.appspot.com/" alt="Cinque Terre" width="100%" height="100%">
-  	</div></a>
-	<a target="_blank" href="wed04.jpg"><div class="div01">
-    <img src="gs://images-faa21.appspot.com/" alt="Cinque Terre" width="100%" height="100%">
-  	</div></a>
-	<a target="_blank" href="wed05.jpg"><div class="div01">
-    <img src="gs://images-faa21.appspot.com/" alt="Cinque Terre" width="100%" height="100%">
-  	</div></a>
-	<a target="_blank" href="wed06.jpg"><div class="div01">
-    <img src="gs://images-faa21.appspot.com/" alt="Cinque Terre" width="100%" height="100%">
-  	</div></a>
-	
+    </div></a>
+  <a target="_blank" href="wed03.jpg"><div id="div01" class="zoom">
+    <img src="wed03.jpg" alt="Cinque Terre" width="100%" height="100%">
+    </div></a>
+  <a target="_blank" href="wed04.jpg"><div id="div01" class="zoom">
+    <img src="wed04.jpg" alt="Cinque Terre" width="100%" height="100%">
+    </div></a>
+  <a target="_blank" href="wed05.jpg"><div id="div01" class="zoom">
+    <img src="wed05.jpg" alt="Cinque Terre" width="100%" height="100%">
+    </div></a>
+  <a target="_blank" href="wed06.jpg"><div id="div01" class="zoom">
+    <img src="wed06.jpg" alt="Cinque Terre" width="100%" height="100%">
+    </div></a>
+  <a target="_blank" href="wed01.jpeg"><div id="div01" class="zoom">
+    <img src="wed01.jpeg" alt="Cinque Terre" width="100%" height="100%">
+    </div></a>
+  <a target="_blank" href="wed02.jpg"><div id="div01" class="zoom">
+    <img src="wed02.jpg" alt="Cinque Terre" width="100%" height="100%">
+    </div></a>
 </div>
 
-
+<br>
 
 <br>
 <div class="div6">
