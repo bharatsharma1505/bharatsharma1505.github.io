@@ -23,8 +23,28 @@ background-image: linear-gradient(316deg, #523a78 0%, #ee696b 74%);
         color: white;
   		font-family: 'Acme', sans-serif;
 
-
 	}
+
+
+
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
 .div1{
 		height: 1%;
 		width: 30%;
@@ -53,17 +73,32 @@ background-image: linear-gradient(316deg, #523a78 0%, #ee696b 74%);
 	margin-right: 20px;	
 	color: white;
 	text-decoration: none;	
+	margin-top: 20px;
+
 }
 
 .a:hover{
 	 			color: #166d3b;
  
 }
-
+.search{	
+	height: 20vh;
+	margin-left: 60%;
+	padding-top: 40px;
+}
+.search input[type=text]{
+	height: 6vh;
+	width: 50%;
+	border: none;
+	border-radius: 14px;	
+}
 .div3{
-		background-color: lightgray;
-		height: 80%;
+		background-color: black;
+		height: 80%	;
 		width: 100%;
+		background-image: url('bg2.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
 		
 }
 
@@ -238,6 +273,24 @@ background-image: linear-gradient(316deg, #523a78 0%, #ee696b 74%);
 color: white;
 		
 }
+.spn1{
+	height: 20vh;
+	width: 40%;
+	font-size: 50px;
+	padding-top: 10%;
+	margin-left: 5%;
+	color: white;
+
+
+}
+.spn2{
+	font-size: 20px;
+	margin-top: 10%;
+	text-align: center;
+}
+::placeholder{
+	font-size: 20px;
+}
 @media(min-width: 300px) and (max-width: 900px){
 	.div1{
 		width: 40%;
@@ -249,7 +302,7 @@ color: white;
 		width: 60%;
 	}
 	.a{
-		margin-top: 2%;
+		margin-top: 20px;
 		font-size: 20px;	}
 .div3{
 	height: 55vh;
@@ -271,6 +324,30 @@ color: white;
 }
 .div5{
 	
+}
+
+#container2{
+	    	width: 32%;
+}
+#container1{
+	    	width: 27%;
+}
+
+.search{	
+	height: 20vh;
+	margin-left: 0%;
+	padding-top: 5%;
+	padding-left: 11%;
+}
+.search input[type=text]{
+	height: 6vh;
+	width: 90%;
+	border: none;
+	border-radius: 14px;
+	opacity: 0.8;	
+}
+.spn1{
+	margin-left: 28%;
 }
 .div55{
 	margin-left: 0px;
@@ -314,11 +391,26 @@ color: white;
 
     </div>
 </div>
-<div class="div3">
-	<img src="wall.jpg" height="100%" width="100%">
+<div class="div3"> 
+	
+	
+  
+  	<div class="search">
+        <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <a href="#"> <i class="fa fa-search"></i> </a>
+    </form>
+  </div>
+
+	<div class="spn1">
+		WHAT'S NEW <br>  
+		<span class="spn2"> 2019 </span>
+
+	</div>
+	
 
 </div>
-<br><br><br><br>
+<br><br>
 <div class="div31">
 	<img src="wall2.jpg" height="100%" width="100%">
 </div>	
@@ -334,7 +426,7 @@ color: white;
 		<center><h3 style="margin-top: 05px">Food</h3></center></div></a>
 	<a href="tour.html"><div id="container1" class="zoom"><img src="tour1.jpg" height="90%" width="100%">
 		<center><h3 style="margin-top: 05px">Tourism</h3></center></div></a>
-	<a href="yoga.html"><div id="container6" class="zoom"><img src="yoga1.jpg" height="90%" width="100%">
+	<a href="all.html"><div id="container6" class="zoom"><img src="collage.jpg" height="90%" width="100%">
 		<center><h3 style="margin-top: 05px">All Images</h3></center></div></a>	
 	<a href="hotel.html" class="hotel"><div id="container7" class="zoom"><img src="hotel1.jpg" height="90%" width="100%" class="hotel">
 		<center><h3 style="margin-top: 05px">Hotels</h3></center></div></a>
