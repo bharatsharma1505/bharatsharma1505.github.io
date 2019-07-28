@@ -1,232 +1,299 @@
 <html>
+
 <head>
-	
-	<meta name="viewport" content="width=device-width, user-scalable=none">
-<link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
 
-<style type="text/css">
-	body{
-		padding: 0px;
-		margin: 0px;
-		overflow-x: hidden;
-		font-family: 'Acme', sans-serif;
-        background-color: black;
-background-color: #523a78;
-background-image: linear-gradient(316deg, #523a78 0%, #ee696b 74%);
-	}
-	
-	.div00{
-		height: 10%;
-		width: 100%;
-		top: 0;
-		position: sticky;
-		opacity: 0.95;
-		background-color: #523a78;
-		background-image: linear-gradient(316deg, #523a78 0%, #ee696b 74%);
-        color: white;
-		font-family: 'Acme', sans-serif;
-  		
+    <meta name="viewport" content="width=device-width, user-scalable=none">
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        body {
+            padding: 0px;
+            margin: 0px;
+            overflow-x: hidden;
+            font-family: 'Acme', sans-serif;
+            background-color: black;
+            background-color: #523a78;
+            background-image: linear-gradient(316deg, #523a78 0%, #ee696b 74%);
+        }
+
+        .div00 {
+            height: 10%;
+            width: 100%;
+            top: 0;
+            position: sticky;
+            opacity: 0.95;
+            background-color: #523a78;
+            background-image: linear-gradient(316deg, #523a78 0%, #ee696b 74%);
+            color: white;
+            font-family: 'Acme', sans-serif;
 
 
-	}
 
-.div1{
-		height: 10%;
-		width: 20%;
-		background-color:white;
-		float: left;	
-		font-size: 30px;
-		top: 0;
-		position: sticky;
-}
+        }
 
-.div2{
-		height: 10%;
-		width: 80%;
-		background-color: white;
-		float: left;
-		top: 0;
-		position: sticky;
-}
+        .div1 {
+            height: 10%;
+            width: 20%;
+            background-color: white;
+            float: left;
+            font-size: 30px;
+            top: 0;
+            position: sticky;
+        }
 
-li{
-	display: inline;
-	float: right;
-	font-size: 25px;
-	margin-right: 20px;	
-}
+        .div2 {
+            height: 10%;
+            width: 80%;
+            background-color: white;
+            float: left;
+            top: 0;
+            position: sticky;
+        }
 
-li:hover{
-	 		background-color: lightgray;
-}
+        li {
+            display: inline;
+            float: right;
+            font-size: 25px;
+            margin-right: 20px;
+        }
 
-.zoom {
-  padding: 0px;
-  transition: transform .5s;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-}
-.zoom:hover {
-  -ms-transform: scale(1.0);
-  -webkit-transform: scale(1.0);
-  transform: scale(1.25); 
-}
+        li:hover {
+            background-color: lightgray;
+        }
 
-.div0{
-		width: 100%;
-		height: 150%;
-		border-style: solid;
-		border-width: 1px;
-		margin-left: 0;
-}
+        .zoom {
+            padding: 0px;
+            transition: transform .5s;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
 
-#div01{
-		width: 20%;
-		height: 20%;
-		border-style: solid;
-		border-width: 1px;
-		float: left;
-		margin-left: 10%;
-		margin-top: 5%;
-}
-.div5{
-		background-color: ;
-		height: 40%;
-		width: 100%;
-}
+        .zoom:hover {
+            -ms-transform: scale(1.0);
+            -webkit-transform: scale(1.0);
+            transform: scale(1.25);
+        }
 
-.div33{
-		height: 100%;
-		width: 30%;
-		margin-left: 20px;	
-		background-color: white;
-		float: left;
-	}
+        .div0 {
+            width: 100%;
+            height: 150%;
+            border-style: solid;
+            border-width: 1px;
+            margin-left: 0;
+        }
 
-	.div44{
-		height: 100%;
-		width: 30%;
-		margin-left: 20px;
-		background-color: white;
-		float: left;
-	}
+        #div01 {
+            width: 20%;
+            height: 20%;
+            border-style: solid;
+            border-width: 1px;
+            float: left;
+            margin-left: 10%;
+            margin-top: 5%;
+        }
 
-	.div55{
-		height: 100%;
-		width: 30%;
-		margin-left: 20px;
-		background-color: white;
-		float: left;
-	}
-	
-	.div66:hover{
-		background-color: gray;
-	}
-	
-	.tag{
-		height: 7%;
-		width: 15%;
-		font-size: 15px;
-		color: white;
-		background-color: black;
-		float: left;
-		margin-left: 1%;
-		margin-top: 6%;
-		text-align: center;
-		}
+        .div5 {
+            background-color: ;
+            height: 40%;
+            width: 100%;
+        }
 
-	.tag1{
-		height: 7%;
-		width: 15%;
-		font-size: 15px;
-		color: white;
-		background-color: gray;
-		float: left;
-		margin-left: 1%;
-		margin-top: 6%;
-		text-align: center;
-		}
+        .div33 {
+            height: 100%;
+            width: 30%;
+            margin-left: 20px;
+            background-color: white;
+            float: left;
+        }
 
-.div6{
-		background-color: gray;
-		height: 10%;
-		width: 100%;
-		padding: 3px;
-}
+        .div44 {
+            height: 100%;
+            width: 30%;
+            margin-left: 20px;
+            background-color: white;
+            float: left;
+        }
 
-	@media(min-width: 300px) and (max-width: 900px){
-	
-	.div0{
-		width: 100%;
-		margin-left: 0%;
-		height: 80vh;
-		}
-		
-		.div00{
-			height: 15%;
-		}
+        .div55 {
+            height: 100%;
+            width: 30%;
+            margin-left: 20px;
+            background-color: white;
+            float: left;
+        }
 
-	#div01{
-			height: 19%;
-			width: 30%;
-			margin-left: 12%;
+        .div66:hover {
+            background-color: gray;
+        }
 
-		}
-	}
+        .tag {
+            height: 7%;
+            width: 15%;
+            font-size: 15px;
+            color: white;
+            background-color: black;
+            float: left;
+            margin-left: 1%;
+            margin-top: 6%;
+            text-align: center;
+        }
 
-</style>
+        .tag1 {
+            height: 7%;
+            width: 15%;
+            font-size: 15px;
+            color: white;
+            background-color: gray;
+            float: left;
+            margin-left: 1%;
+            margin-top: 6%;
+            text-align: center;
+        }
+
+        .div6 {
+            background-color: gray;
+            height: 10%;
+            width: 100%;
+            padding: 3px;
+        }
+
+        @media(min-width: 300px) and (max-width: 900px) {
+
+            .div0 {
+                width: 100%;
+                margin-left: 0%;
+                height: 80vh;
+            }
+
+            .div00 {
+                height: 15%;
+            }
+
+            #div01 {
+                height: 19%;
+                width: 30%;
+                margin-left: 12%;
+
+            }
+        }
+    </style>
+
 <body>
-<div class="div00">
-<div class="div1">
-	<p style="margin-left: 15px; margin-top: 15px">PicsMarket</p>
-</div>
+    <div class="div00">
+        <div class="div1">
+            <p style="margin-left: 15px; margin-top: 15px">PicsMarket</p>
+        </div>
 
-<div class="div2">
-	<ul>
-	<a href="signup.html"><li>Sign Up</li></a>
-	<a href="login.html"><li>Sign In</li></a>
- 	<a href="index.html"><li>Images</li></a>
-</ul>
-</div>
-	</div>
-<br><br><br>
-<div class="div0">
-	<a target="_blank" href="baby01.jpeg"><div id="div01" class="zoom">
-    <img src="baby01.jpeg" alt="Cinque Terre" width="100%" height="100%">
-  	</div></a>
-	<a target="_blank" href="baby02.jpg"><div id="div01" class="zoom">
-    <img src="baby02.jpg" alt="Cinque Terre" width="100%" height="100%">
-  	</div></a>
-	<a target="_blank" href="baby03.jpg"><div id="div01" class="zoom">
-    <img src="baby03.jpg" alt="Cinque Terre" width="100%" height="100%">
-  	</div></a>
-	<a target="_blank" href="baby04.jpg"><div id="div01" class="zoom">
-    <img src="baby04.jpg" alt="Cinque Terre" width="100%" height="100%">
-  	</div></a>
-  	<a target="_blank" href="baby01.jpeg"><div id="div01" class="zoom">
-    <img src="baby01.jpeg" alt="Cinque Terre" width="100%" height="100%">
-  	</div></a>
-	<a target="_blank" href="baby02.jpg"><div id="div01" class="zoom">
-    <img src="baby02.jpg" alt="Cinque Terre" width="100%" height="100%">
-  	</div></a>
-	<a target="_blank" href="baby03.jpg"><div id="div01" class="zoom">
-    <img src="baby03.jpg" alt="Cinque Terre" width="100%" height="100%">
-  	</div></a>
-	<a target="_blank" href="baby04.jpg"><div id="div01" class="zoom">
-    <img src="baby04.jpg" alt="Cinque Terre" width="100%" height="100%">
-  	</div></a>
+        <div class="div2">
+            <ul>
+                <a href="signup.html">
+                    <li>Sign Up</li>
+                </a>
+                <a href="login.html">
+                    <li>Sign In</li>
+                </a>
+                <a href="index.html">
+                    <li>Images</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="div0">
 
-</div>
+        <a id="target01" target="_blank">
+            <div id="div01" class="zoom">
+                <img id="c01" alt="Cinque Terre" width="100%" height="100%">
+            </div>
+        </a>
+        <a id="target02" target="_blank">
+            <div id="div01" class="zoom">
+                <img id="c02" alt="Cinque Terre" width="100%" height="100%">
+            </div>
+        </a>
+        <a id="target03" target="_blank">
+            <div id="div01" class="zoom">
+                <img id="c03" alt="Cinque Terre" width="100%" height="100%">
+            </div>
+        </a>
+        <a id="target04" target="_blank">
+            <div id="div01" class="zoom">
+                <img id="c04" alt="Cinque Terre" width="100%" height="100%">
+            </div>
+        </a>
+        <a id="target05" target="_blank">
+            <div id="div01" class="zoom">
+                <img id="c05" alt="Cinque Terre" width="100%" height="100%">
+            </div>
+        </a>
+        <a id="target06" target="_blank">
+            <div id="div01" class="zoom">
+                <img id="c06" alt="Cinque Terre" width="100%" height="100%">
+            </div>
+        </a>
+        <a id="target07" target="_blank">
+            <div id="div01" class="zoom">
+                <img id="c07" alt="Cinque Terre" width="100%" height="100%">
+            </div>
+        </a>
+        <a id="target08" target="_blank">
+            <div id="div01" class="zoom">
+                <img id="c08" alt="Cinque Terre" width="100%" height="100%">
+            </div>
+        </a>
 
-<br>
+    </div>
 
-<br>
-<div class="div6">
-<h1><center>World's largest collection of Images & Videos.</center></h1>
-</div>
+    <br>
 
+    <br>
+    <div class="div6">
+        <h1>
+            <center>World's largest collection of Images & Videos.</center>
+        </h1>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyA7wVFW8MGuaKm3SWS5eG3-oOwmWvVaZh0",
+            authDomain: "images-faa21.firebaseapp.com",
+            databaseURL: "https://images-faa21.firebaseio.com",
+            projectId: "images-faa21",
+            storageBucket: "images-faa21.appspot.com",
+            messagingSenderId: "600788877066",
+            appId: "1:600788877066:web:bfe1fe875a96e0c6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script>
+        var database = firebase.database()
+        database.ref("/category/children").once("value", function (child_snap) {
+            child_snap = child_snap.val()
+
+            for (var i = 1; i < 5; i++) {
+                document.querySelector("#c0" + i).src = child_snap[i]
+                document.querySelector("#target0" + i).href = child_snap[i]
+            }
+            document.querySelector("#c05").src = child_snap[1]
+            document.querySelector("#target05").href = child_snap[1]
+            document.querySelector("#c06").src = child_snap[2]
+            document.querySelector("#target06").href = child_snap[2]
+            document.querySelector("#c07").src = child_snap[3]
+            document.querySelector("#target07").href = child_snap[3]
+            document.querySelector("#c08").src = child_snap[4]
+            document.querySelector("#target08").href = child_snap[4]
+
+        })
+
+    </script>
 
 </body>
 </head>
+
 </html>
