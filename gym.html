@@ -192,29 +192,29 @@ li:hover{
 	</div>
 <br><br><br>
 <div class="div0">
-	<a target="_blank" href="gym01.jpg"><div id="div01" class="zoom">
-    <img src="gym01.jpg" alt="Cinque Terre" width="100%" height="100%">
+	<a id="target01" target="_blank" href="gym01.jpg"><div id="div01" class="zoom">
+    <img id="g01" src="gym01.jpg" alt="Cinque Terre" width="100%" height="100%">
   	</div></a>
-	<a target="_blank" href="gym02.jpg"><div id="div01" class="zoom">
-    <img src="gym02.jpg" alt="Cinque Terre" width="100%" height="100%">
+	<a id="target02" target="_blank" href="gym02.jpg"><div id="div01" class="zoom">
+    <img id="g02" src="gym02.jpg" alt="Cinque Terre" width="100%" height="100%">
   	</div></a>
-	<a target="_blank" href="gym03.jpg"><div id="div01" class="zoom">
-    <img src="gym03.jpg" alt="Cinque Terre" width="100%" height="100%">
+	<a id="target03" target="_blank" href="gym03.jpg"><div id="div01" class="zoom">
+    <img id="g03" src="gym03.jpg" alt="Cinque Terre" width="100%" height="100%">
   	</div></a>
-	<a target="_blank" href="gym04.jpg"><div id="div01" class="zoom">
-    <img src="gym04.jpg" alt="Cinque Terre" width="100%" height="100%">
+	<a id="target04" target="_blank" href="gym04.jpg"><div id="div01" class="zoom">
+    <img id="g04" src="gym04.jpg" alt="Cinque Terre" width="100%" height="100%">
   	</div></a>
-  	<a target="_blank" href="gym01.jpg"><div id="div01" class="zoom">
-    <img src="gym01.jpg" alt="Cinque Terre" width="100%" height="100%">
+  	<a id="target05" target="_blank" href="gym01.jpg"><div id="div01" class="zoom">
+    <img id="g05" src="gym01.jpg" alt="Cinque Terre" width="100%" height="100%">
   	</div></a>
-	<a target="_blank" href="gym02.jpg"><div id="div01" class="zoom">
-    <img src="gym02.jpg" alt="Cinque Terre" width="100%" height="100%">
+	<a id="target06" target="_blank" href="gym02.jpg"><div id="div01" class="zoom">
+    <img id="g06" src="gym02.jpg" alt="Cinque Terre" width="100%" height="100%">
   	</div></a>
-	<a target="_blank" href="gym03.jpg"><div id="div01" class="zoom">
-    <img src="gym03.jpg" alt="Cinque Terre" width="100%" height="100%">
+	<a id="target07" target="_blank" href="gym03.jpg"><div id="div01" class="zoom">
+    <img id="g07" src="gym03.jpg" alt="Cinque Terre" width="100%" height="100%">
   	</div></a>
-	<a target="_blank" href="gym04.jpg"><div id="div01" class="zoom">
-    <img src="gym04.jpg" alt="Cinque Terre" width="100%" height="100%">
+	<a id="target08" target="_blank" href="gym04.jpg"><div id="div01" class="zoom">
+    <img id="g08" src="gym04.jpg" alt="Cinque Terre" width="100%" height="100%">
   	</div></a>
 
 </div>
@@ -225,6 +225,45 @@ li:hover{
 <div class="div6">
 <h1><center>World's largest collection of Images & Videos.</center></h1>
 </div>
+
+<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyA7wVFW8MGuaKm3SWS5eG3-oOwmWvVaZh0",
+            authDomain: "images-faa21.firebaseapp.com",
+            databaseURL: "https://images-faa21.firebaseio.com",
+            projectId: "images-faa21",
+            storageBucket: "images-faa21.appspot.com",
+            messagingSenderId: "600788877066",
+            appId: "1:600788877066:web:bfe1fe875a96e0c6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script>
+        var database = firebase.database()
+        database.ref("/category/gym").once("value", function (gym_snap) {
+            gym_snap = gym_snap.val()
+            
+            for (var i=1; i < 5; i++) {
+                document.querySelector("#g0" + i).src = gym_snap[i]
+                document.querySelector("#target0" + i).href = gym_snap[i]
+            }
+            document.querySelector("#g05").src = gym_snap[1]
+            document.querySelector("#target05").href = gym_snap[1]
+            document.querySelector("#g06").src = gym_snap[2]
+            document.querySelector("#target06").href = gym_snap[2]
+            document.querySelector("#g07").src = gym_snap[1]
+            document.querySelector("#target07").href = gym_snap[1]
+            document.querySelector("#g08").src = gym_snap[2]
+            document.querySelector("#target08").href = gym_snap[2]
+
+        })
+    
+    </script>
 
 
 </body>
