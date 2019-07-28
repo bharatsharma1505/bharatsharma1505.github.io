@@ -193,28 +193,28 @@ li:hover{
 <br><br><br>
 <div class="div0">
 	<a target="_blank" href="wed01.jpeg"><div id="div01" class="zoom">
-    <img src="wed01.jpeg" alt="Cinque Terre" width="100%" height="100%">
+    <img id="w01" alt="Cinque Terre" width="100%" height="100%">
     </div></a>
   <a target="_blank" href="wed02.jpg"><div id="div01" class="zoom">
-    <img src="wed02.jpg" alt="Cinque Terre" width="100%" height="100%">
+    <img id="w02" alt="Cinque Terre" width="100%" height="100%">
     </div></a>
   <a target="_blank" href="wed03.jpg"><div id="div01" class="zoom">
-    <img src="wed03.jpg" alt="Cinque Terre" width="100%" height="100%">
+    <img id="w03" alt="Cinque Terre" width="100%" height="100%">
     </div></a>
   <a target="_blank" href="wed04.jpg"><div id="div01" class="zoom">
-    <img src="wed04.jpg" alt="Cinque Terre" width="100%" height="100%">
+    <img id="w04" alt="Cinque Terre" width="100%" height="100%">
     </div></a>
   <a target="_blank" href="wed05.jpg"><div id="div01" class="zoom">
-    <img src="wed05.jpg" alt="Cinque Terre" width="100%" height="100%">
+    <img id="w05" alt="Cinque Terre" width="100%" height="100%">
     </div></a>
   <a target="_blank" href="wed06.jpg"><div id="div01" class="zoom">
-    <img src="wed06.jpg" alt="Cinque Terre" width="100%" height="100%">
+    <img id="w06" alt="Cinque Terre" width="100%" height="100%">
     </div></a>
   <a target="_blank" href="wed01.jpeg"><div id="div01" class="zoom">
-    <img src="wed01.jpeg" alt="Cinque Terre" width="100%" height="100%">
+    <img id="w07" alt="Cinque Terre" width="100%" height="100%">
     </div></a>
   <a target="_blank" href="wed02.jpg"><div id="div01" class="zoom">
-    <img src="wed02.jpg" alt="Cinque Terre" width="100%" height="100%">
+    <img id="w08" alt="Cinque Terre" width="100%" height="100%">
     </div></a>
 </div>
 
@@ -224,7 +224,37 @@ li:hover{
 <div class="div6">
 <h1><center>World's largest collection of Images & Videos.</center></h1>
 </div>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyA7wVFW8MGuaKm3SWS5eG3-oOwmWvVaZh0",
+            authDomain: "images-faa21.firebaseapp.com",
+            databaseURL: "https://images-faa21.firebaseio.com",
+            projectId: "images-faa21",
+            storageBucket: "images-faa21.appspot.com",
+            messagingSenderId: "600788877066",
+            appId: "1:600788877066:web:bfe1fe875a96e0c6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
 
+    <script>
+        var database = firebase.database()
+        database.ref("/category/wedding").once("value", function (wedding_snap) {
+            wedding_snap = wedding_snap.val()
+            
+            for (var i=1; i < 7; i++) {
+                document.querySelector("#w0" + i).src = wedding_snap[i]
+            }
+            document.querySelector("#w07").src = wedding_snap[1]
+            document.querySelector("#w08").src = wedding_snap[2]
+
+        })
+    
+    </script>
 
 </body>
 </head>
