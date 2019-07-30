@@ -63,7 +63,7 @@
 				</div>
 			</div>
 			<div class="col-xs-12">
-				<div class="btn-lrg submit-btn">Send Message</div>
+				<div class="btn-lrg submit-btn" onclick="Myfun()">Send Message</div>
 			</div>
 	</div>
 </div>
@@ -205,7 +205,7 @@ input[type=checkbox]:checked + label {
 
 <script>
         
-     function submit(){
+     function Myfun(){
         var a= document.getElementById("name").value;
         var b= document.getElementById("number").value;
         var c=document.getElementById("mail").value;
