@@ -1,189 +1,297 @@
 <html>
+
 <head>
-<style type="text/css">
-.div1{
-		height: 10%;
-		width: 20%;
-		background-color:white;
-		float: left;	
-		font-size: 30px;
-		top: 0;
-		position: sticky;
-}
 
-.div2{
-		height: 10%;
-		width: 80%;
-		background-color: white;
-		float: left;
-		top: 0;
-		position: sticky;
-}
+    <meta name="viewport" content="width=device-width, user-scalable=none">
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
 
-li{
-	display: inline;
-	float: right;
-	font-size: 25px;
-	margin-right: 20px;	
-}
+    <style type="text/css">
+        body {
+            padding: 0px;
+            margin: 0px;
+            overflow-x: hidden;
+            font-family: 'Acme', sans-serif;
+            background-color: black;
+            background-color: #523a78;
+            background-image: linear-gradient(316deg, #523a78 0%, #ee696b 74%);
+        }
 
-li:hover{
-	 		background-color: lightgray;
-}
+        .div00 {
+            height: 10%;
+            width: 100%;
+            top: 0;
+            position: sticky;
+            opacity: 0.95;
+            background-color: #523a78;
+            background-image: linear-gradient(316deg, #523a78 0%, #ee696b 74%);
+            color: white;
+            font-family: 'Acme', sans-serif;
 
-.div0{
-		width: 60%;
-		height: 100%;
-		border-style: solid;
-		border-width: 1px;
-		margin-left: 20%;
-}
 
-.div01{
-		width: 30%;
-		height: 30%;
-		border-style: solid;
-		border-width: 1px;
-		float: left;
-		margin-left: 10%;
-		margin-top: 10%;
-}
 
-.div5{
-		background-color: ;
-		height: 40%;
-		width: 100%;
-}
+        }
 
-.div33{
-		height: 100%;
-		width: 30%;
-		margin-left: 20px;	
-		background-color: white;
-		float: left;
-	}
+        .div1 {
+            height: 10%;
+            width: 20%;
+            background-color: white;
+            float: left;
+            font-size: 30px;
+            top: 0;
+            position: sticky;
+        }
 
-	.div44{
-		height: 100%;
-		width: 30%;
-		margin-left: 20px;
-		background-color: white;
-		float: left;
-	}
+        .div2 {
+            height: 10%;
+            width: 80%;
+            background-color: white;
+            float: left;
+            top: 0;
+            position: sticky;
+        }
 
-	.div55{
-		height: 100%;
-		width: 30%;
-		margin-left: 20px;
-		background-color: white;
-		float: left;
-	}
-	
-	.div66:hover{
-		background-color: gray;
-	}
-	
-	.tag{
-		height: 7%;
-		width: 15%;
-		font-size: 15px;
-		color: white;
-		background-color: black;
-		float: left;
-		margin-left: 1%;
-		margin-top: 6%;
-		text-align: center;
-		}
+        li {
+            display: inline;
+            float: right;
+            font-size: 25px;
+            margin-right: 20px;
+        }
 
-	.tag1{
-		height: 7%;
-		width: 15%;
-		font-size: 15px;
-		color: white;
-		background-color: gray;
-		float: left;
-		margin-left: 1%;
-		margin-top: 6%;
-		text-align: center;
-		}
+        li:hover {
+            background-color: lightgray;
+            text-decoration:none;
+        }
 
-.div6{
-		background-color: gray;
-		height: 10%;
-		width: 100%;
-		padding: 3px;
-}
+        .zoom {
+            padding: 0px;
+            transition: transform .5s;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
 
-</style>
+        .zoom:hover {
+            -ms-transform: scale(1.0);
+            -webkit-transform: scale(1.0);
+            transform: scale(1.25);
+        }
+
+        .div0 {
+            width: 100%;
+            height: 150%;
+            border-style: solid;
+            border-width: 1px;
+            margin-left: 0;
+        }
+
+        #div01 {
+            width: 20%;
+            height: 20%;
+            border-style: solid;
+            border-width: 1px;
+            float: left;
+            margin-left: 10%;
+            margin-top: 5%;
+        }
+
+        .div5 {
+            background-color: ;
+            height: 40%;
+            width: 100%;
+        }
+
+        .div33 {
+            height: 100%;
+            width: 30%;
+            margin-left: 20px;
+            background-color: white;
+            float: left;
+        }
+
+        .div44 {
+            height: 100%;
+            width: 30%;
+            margin-left: 20px;
+            background-color: white;
+            float: left;
+        }
+
+        .div55 {
+            height: 100%;
+            width: 30%;
+            margin-left: 20px;
+            background-color: white;
+            float: left;
+        }
+
+        .div66:hover {
+            background-color: gray;
+        }
+
+        .tag {
+            height: 7%;
+            width: 15%;
+            font-size: 15px;
+            color: white;
+            background-color: black;
+            float: left;
+            margin-left: 1%;
+            margin-top: 6%;
+            text-align: center;
+        }
+
+        .tag1 {
+            height: 7%;
+            width: 15%;
+            font-size: 15px;
+            color: white;
+            background-color: gray;
+            float: left;
+            margin-left: 1%;
+            margin-top: 6%;
+            text-align: center;
+        }
+
+        .div6 {
+            background-color: gray;
+            height: 10%;
+            width: 100%;
+            padding: 3px;
+        }
+
+        @media(min-width: 300px) and (max-width: 900px) {
+
+            .div0 {
+                width: 100%;
+                margin-left: 0%;
+                height: 80vh;
+            }
+
+            .div00 {
+                height: 15%;
+            }
+
+            #div01 {
+                height: 19%;
+                width: 30%;
+                margin-left: 12%;
+
+            }
+        }
+    </style>
+
 <body>
+    <div class="div00">
+        <div class="div1">
+            <p style="margin-left: 15px; margin-top: 15px">PicsMarket</p>
+        </div>
 
-<div class="div1">
-	<p style="margin-left: 15px; margin-top: 15px">PicsMarket</p>
-</div>
+        <div class="div2">
+            <ul>
+                <a href="contact.html">
+                    <li>Contact Us</li>
+                </a>
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="div0">
 
-<div class="div2">
-	<ul>
-	<a href="signup.html"><li>Sign Up</li></a>
-	<a href="login.html"><li>Sign In</li></a>
- 	<a href="index.html"><li>Images</li></a>
-</ul>
-</div>
-<br><br><br><br><br>
-<div class="div0">
-	<div class="div01"><img src="tour01.jpg" height="100%" width="100%"alt="Image Not Available"></div>
-	<div class="div01"><img src="tour02.jpg" height="100%" width="100%" alt="Image Not Available"></div>
-	<div class="div01"><img src="tour03.jpg" height="100%" width="100%" alt="Image Not Available"></div>
-	<div class="div01"><img src="tour04.jpg" height="100%" width="100%" alt="Image Not Available"></div>
+        <a id="target01" target="_blank">
+            <div id="div01" class="zoom">
+                <img id="c01" alt="Cinque Terre" width="100%" height="100%">
+            </div>
+        </a>
+        <a id="target02" target="_blank">
+            <div id="div01" class="zoom">
+                <img id="c02" alt="Cinque Terre" width="100%" height="100%">
+            </div>
+        </a>
+        <a id="target03" target="_blank">
+            <div id="div01" class="zoom">
+                <img id="c03" alt="Cinque Terre" width="100%" height="100%">
+            </div>
+        </a>
+        <a id="target04" target="_blank">
+            <div id="div01" class="zoom">
+                <img id="c04" alt="Cinque Terre" width="100%" height="100%">
+            </div>
+        </a>
+        <a id="target05" target="_blank">
+            <div id="div01" class="zoom">
+                <img id="c05" alt="Cinque Terre" width="100%" height="100%">
+            </div>
+        </a>
+        <a id="target06" target="_blank">
+            <div id="div01" class="zoom">
+                <img id="c06" alt="Cinque Terre" width="100%" height="100%">
+            </div>
+        </a>
+        <a id="target07" target="_blank">
+            <div id="div01" class="zoom">
+                <img id="c07" alt="Cinque Terre" width="100%" height="100%">
+            </div>
+        </a>
+        <a id="target08" target="_blank">
+            <div id="div01" class="zoom">
+                <img id="c08" alt="Cinque Terre" width="100%" height="100%">
+            </div>
+        </a>
 
-</div>
+    </div>
 
-<br>
-<div class="div5">
+    <br>
 
-<div class="div33"><h2>FOOTER</h2>
-<p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
-<br><br>
+    <br>
+    <div class="div6">
+        <h1>
+            <center>World's largest collection of Images & Videos.</center>
+        </h1>
+    </div>
 
-</div>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyA7wVFW8MGuaKm3SWS5eG3-oOwmWvVaZh0",
+            authDomain: "images-faa21.firebaseapp.com",
+            databaseURL: "https://images-faa21.firebaseio.com",
+            projectId: "images-faa21",
+            storageBucket: "images-faa21.appspot.com",
+            messagingSenderId: "600788877066",
+            appId: "1:600788877066:web:bfe1fe875a96e0c6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
 
+    <script>
+        var database = firebase.database()
+        database.ref("/category/children").once("value", function (child_snap) {
+            child_snap = child_snap.val()
 
-<div class="div44"><h2> BLOG POSTS</h2>
-<div class="div66">
-<img src="workshop.jpg" height="60px" width="70px" align="left"><h3> Lorem</h3>
-<p>Sed mattis ninc</p>
-</div><br>
-<div class="div66">
-<img src="gondol.jpg" height="60px" width="70px" align="left"><h3>Ipsum</h3>
-<p>Praes tinci sed</p>
-</div>
-</div>
+            for (var i = 1; i < 5; i++) {
+                document.querySelector("#c0" + i).src = child_snap[i]
+                document.querySelector("#target0" + i).href = child_snap[i]
+            }
+            document.querySelector("#c05").src = child_snap[1]
+            document.querySelector("#target05").href = child_snap[1]
+            document.querySelector("#c06").src = child_snap[2]
+            document.querySelector("#target06").href = child_snap[2]
+            document.querySelector("#c07").src = child_snap[3]
+            document.querySelector("#target07").href = child_snap[3]
+            document.querySelector("#c08").src = child_snap[4]
+            document.querySelector("#target08").href = child_snap[4]
 
+        })
 
-<div class="div55"><h2>POPULAR TAGS</H2>
-<p>
-        <span class="tag">Gym</span> 
-	<span class="tag1">Tourism</span>   	
-	<span class="tag1">Travel</span>
-        <span class="tag1">Food</span> 
-	<span class="tag1">Wedding</span> 
-	<span class="tag1">Drinks</span>
-        <span class="tag1">Marraige</span> 
-	<span class="tag1">Indian</span> 
-	<span class="tag1">Baby</span>
-        <span class="tag1">Children</span> 
-	<span class="tag1">Yoga</span> 
-	<span class="tag1">Health</span>
-        <span class="tag1">Hotels</span> 
-	<span class="tag1">Fitness</span>
-      </p></div>
-</div>
-
-<br>
-<div class="div6">
-<h1><center>World's largest collection of Images & Videos.</center></h1>
-</div>
-
+    </script>
 
 </body>
 </head>
+
 </html>
