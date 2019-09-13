@@ -376,7 +376,7 @@ color: white;
 
 <div class="div2">
 	
-	<a href="" class="a"> Sign In</a>
+	<a href="" class="a" id="login-btn" onclick="login();"> Sign In</a>
 	<a href="contact.html" class="a"> Contact Us</a>
 	
  	
@@ -467,6 +467,45 @@ USA/Canada toll free :<br>+1-800-406-6254<br>
 </div>
 </h2>
 </div>
+	
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA7wVFW8MGuaKm3SWS5eG3-oOwmWvVaZh0",
+    authDomain: "images-faa21.firebaseapp.com",
+    databaseURL: "https://images-faa21.firebaseio.com",
+    projectId: "images-faa21",
+    storageBucket: "images-faa21.appspot.com",
+    messagingSenderId: "600788877066",
+    appId: "1:600788877066:web:bfe1fe875a96e0c6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+	
+<script>
+
+	var provider = new firebase.auth.GoogleAuthProvider();
+	
+	var login = function () {
+		firebase.auth().signInWithRedirect(provider);
+	
+		firebase.auth().getRedirectResult().then(function(result) {
+  			// The signed-in user info.
+  			var user = result.user;
+			alert("Welcome " + user.displayName);
+		}).catch(function(error) {
+  			console.log(error)
+		});
+	} 
+	
+	
+</script>
+	
 </body>
 </head>
 </html>
